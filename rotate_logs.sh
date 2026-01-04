@@ -1,4 +1,6 @@
-TARGET_FILE="logdata.jsonl"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROTATED_DIR="$SCRIPT_DIR/rotatedFiles"
+TARGET_FILE="$SCRIPT_DIR/logdata.jsonl"
 MAX_LINES=20
 while true
 do
@@ -6,8 +8,9 @@ do
         LINE_COUNT=$(wc -l < "$TARGET_FILE")
 
         if [ "$LINE_COUNT" -ge "$MAX_LINES" ]; then
-            TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-            NEW_NAME="${TARGET_FILE}_${TIMESTAMP}.old"
+            TIMESTAMP=$(date +%Y-%m-%d__%H-%M-%S)
+            BASE_NAME="$(basename "$TARGET_FILE")"
+            NEW_NAME="${BASE_NAME}_${TIMESTAMP}.old"
             mv "$TARGET_FILE" "$NEW_NAME"
             touch "$TARGET_FILE"
             
