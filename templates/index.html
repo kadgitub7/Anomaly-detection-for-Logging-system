@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Log System with Anomaly Detection</title>
+            <script src="{{ url_for('static', filename='script.js') }}"></script>
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+        <body>
+            <p id = "Description"> Click the button to make logs</p>
+            <button onclick = generateLog()> Click For New Log</button>
+            <p id = "latestLog"></p>
+        </body>
+    </html>
