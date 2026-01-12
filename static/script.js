@@ -14,3 +14,12 @@ async function generateLog() {
     let element = document.getElementById("latestLog");
     element.textContent = JSON.stringify(result);
 }
+
+async function processLogs() {
+    fetch('/processLogs', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("mlResponse").innerText =
+                `Anomalies detected:\n${JSON.stringify(data, null, 2)}`
+        });
+}
