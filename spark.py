@@ -33,7 +33,7 @@ def main():
         
         db_properties = {
             "user": "root",
-            "password": "KadSQLFirst1",
+            "password": "password",
             "driver": "com.mysql.cj.jdbc.Driver"
         }
 
