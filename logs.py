@@ -35,7 +35,7 @@ def getLogs():
     con = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='KadSQLFirst1',
+        password='password',
         database='testdb'
     )
     cursor = con.cursor()
@@ -91,4 +91,5 @@ def home():
     return render_template('index.html')
 
 if __name__ == '__main__':
+
     app.run(debug=True)
