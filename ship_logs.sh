@@ -11,8 +11,10 @@ do
             if grep -Fxq "$filename" "$LOG_FILE"; then
                 : 
             else
-                cp "$file_path" "$DESTINATION_FOLDER/"
-                echo "Shipped File "$filename""
+                temp_file="$DESTINATION_FOLDER/${filename%.gz}"
+                gunzip -c "$file_path" > "$temp_file"
+
+                echo "Shipped File (uncompressed): $(basename "$temp_file")"
                 echo "$filename" >> "$LOG_FILE"
             fi
         done

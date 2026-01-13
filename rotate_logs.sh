@@ -8,9 +8,12 @@ do
         LINE_COUNT=$(wc -l < "$TARGET_FILE")
 
         if [ "$LINE_COUNT" -ge "$MAX_LINES" ]; then
+            mkdir -p "$ROTATED_DIR"
+
             TIMESTAMP=$(date +%Y-%m-%d__%H-%M-%S)
             BASE_NAME="$(basename "$TARGET_FILE")"
-            NEW_NAME="${BASE_NAME}_${TIMESTAMP}.old"
+            NEW_NAME="$ROTATED_DIR/${BASE_NAME}_${TIMESTAMP}.old"
+
             mv "$TARGET_FILE" "$NEW_NAME"
             touch "$TARGET_FILE"
             

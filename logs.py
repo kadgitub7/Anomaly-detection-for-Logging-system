@@ -35,7 +35,7 @@ def getLogs():
     con = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='__password Here',
+        password='KadSQLFirst1',
         database='testdb'
     )
     cursor = con.cursor()
