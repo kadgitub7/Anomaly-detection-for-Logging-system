@@ -1,5 +1,6 @@
 # Anomaly-detection-for-Logging-system
-This is a project aimed at developing a pipelined system of log data collection and organizing the data through Unix commands to then a HDFS system that shovels the data for ML anomaly detection.
+This is a project aimed at developing a pipelined system of log data collection and organizing the data through Unix commands to then a HDFS system that shovels the data for ML anomaly detection. This is a full stack architecture with frontend and Flask API backend alongside a HDFS file system and SQL database management. The system utilizes a pipelined approach to processing input through file manipulation and segmentation. A Spark layer ingest data from HDFS into SQL and utilize the REST API backend to retrieve data and process through a Logistic Classification algorithm for anomaly detection.
+
 
 Example Tableau Visualization of the log data presented here: https://public.tableau.com/app/profile/kadhir.ponnambalam/viz/Log_DataVisualization/Sheet1
 
