@@ -16,10 +16,10 @@ Look into the following resources for download instructions:
 For setup and running of the program:
 Follow the video demo here: https://www.youtube.com/watch?v=TJmfjUQGjUo
 
-[1] Run the Python backend server logs.py
-[2] Open the frontend on the server side and click to make new logs
-[3] Once an adequate amount of logs have been made(greater that 20 at least) run the Unix/Bash Scripts 1 at a time
-[4] Follow this order: rotation -> compression -> ship -> ingest_to_hdfs
-[5] Verfify if the data has been added to your docker container
-[6] Check the SQL database to see if the data has been transfered from the container
-[7] On the frontend, click the button to detect the anomalies in the data
+- [1] Run the Python backend server logs.py
+- [2] Open the frontend on the server side and click to make new logs
+- [3] Once an adequate amount of logs have been made(greater that 20 at least) run the Unix/Bash Scripts 1 at a time
+- [4] Follow this order: rotation -> compression -> ship -> ingest_to_hdfs
+- [5] Verfify if the data has been added to your docker container
+- [6] Check the SQL database to see if the data has been transfered from the container
+- [7] On the frontend, click the button to detect the anomalies in the data
